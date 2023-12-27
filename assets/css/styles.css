@@ -711,14 +711,13 @@ button {
   position: relative;
   margin: 0 16px;
   border-radius: 130px;
-  overflow: hidden;
 }
 
 .staff-item__img-wrap::before {
   position: absolute;
   display: inline-block;
   content: "";
-  height: 266px;
+  height: 94%;
   width: 100%;
   border-radius: inherit;
   left: 0;
@@ -726,10 +725,56 @@ button {
   background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
 }
 
+.staff-item__img-wrap::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: 0;
+  translate: -50%;
+  width: calc(100% + 32px);
+  height: 100%;
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.staff-item:nth-child(2) .staff-item__img-wrap::before {
+  background: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+}
+
+.staff-item:nth-child(3) .staff-item__img-wrap::before {
+  background: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+}
+
+.staff-item:nth-child(4) .staff-item__img-wrap::before {
+  background: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
+}
+
+.staff-item:nth-child(1) .staff-item__img-wrap::after {
+  background-image: url(../img/staff-decor-01.svg);
+}
+
+.staff-item:nth-child(2) .staff-item__img-wrap::after {
+  background-image: url(../img/staff-decor-02.svg);
+}
+
+.staff-item:nth-child(3) .staff-item__img-wrap::after {
+  background-image: url(../img/staff-decor-03.svg);
+}
+
+.staff-item:nth-child(4) .staff-item__img-wrap::after {
+  background-image: url(../img/staff-decor-04.svg);
+}
+
+.staff-item:nth-child(even) .staff-item__img-wrap::after {
+  background-position: 0 19px;
+}
+
 .staff-item__img {
   position: relative;
   width: 100%;
   z-index: 1;
+  border-radius: inherit;
   display: block;
 }
 
